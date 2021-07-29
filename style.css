@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after 
+{
+    box-sizing: border-box;
+}
+
+body 
+{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    background: linear-gradient(135deg, rgb(225,235,100), rgb(22,170,6));
+    min-height: calc(100vh - 2rem);
+}
+
+.container 
+{
+    width: 100%;
+    max-width: 68rem;
+    margin: 2rem auto;
+    min-height: calc(100vh - 5rem);
+}
+
+.title 
+{
+    text-align: center;
+    font-weight: 600;
+    font-size: 33px;
+    padding-bottom: 4rem;
+    color: white;
+}
+
+.credit-data 
+{
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 20px rgb(27, 26, 26);
+    min-height: 300px;
+    padding: .5rem 0;
+    margin-bottom: .25rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.row 
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0 2rem;
+}       
+
+.row .element
+{
+    margin: 0 1rem;
+}
+
+.row .element input,
+.row .element select 
+{
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 30px;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+.row .element select 
+{
+    width: 170px;
+}
+
+
+
+.row .element label
+{
+    display: grid;
+    padding-bottom: .5rem;
+}
+
+.check
+{
+    margin: 3.5rem auto .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check button 
+{
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 225px;
+    height: 50px;
+    background: rgb(22,170,6);
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: "Open Sans";
+    cursor: pointer;
+}
+
+.results
+{
+    transition: all 350ms ease;
+    width: 100%;
+    box-shadow: 2px 2px 20px rgb(27, 26, 26);
+    min-height: 300px;
+    padding: .5rem 0;
+    
+    background: white;
+    border-radius: 8px;
+}
+
+.results .title{
+    color: rgb(22,170,6);
+}
+
+.results .content 
+{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(3, minmax(200px, 100%));
+}
+
+.results .content .text
+{
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.results .content .result
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(22,170,6);
+    font-family: "Source Sans Pro";
+
+}
+
+.hide 
+{
+    display: none;
+}
+
+.statistics .compare .bar .progress 
+{
+    width: 100%;
+    background: #04AA6D;
+    height: 50px;
+    border-radius: 6rem;
+    
+}
+
+.statistics .compare .points 
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.statistics .compare .points > div
+{
+    
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.statistics .compare .bar .progress.low_score 
+{
+    background: crimson;
+}
+
+.statistics .compare .bar .progress.medium_score
+{
+    background: rgb(252, 184, 38);
+}
+
+.fail 
+{
+    color: crimson;
+    font-family: "Open Sans", sans-serif;
+    margin: 1.5rem auto 1rem;
+    text-align: center;
+    font-size: 20px;
+}
+
+#chartdiv
+{
+    width: 100%;
+    height: 150px; /* as the half of the width */
+    
+    border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+    border-top-right-radius: 110px; /* 100px of height + 10px of border */
+    border: 50px solid #000;
+    border-bottom: 0;
+    
+}
+
+.statistics 
+{
+    min-height: 200px;
+}
+
+.statistics .compare .percent 
+{
+    margin-left: 95%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.statistics .compare .bar 
+{
+    width: 100%;
+    
+    border: 2px solid grey;
+    border-radius: 6rem;
+}
+
+
+
+.statistics .title 
+{
+    color: #000;
+    padding-bottom: 0;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+}
+
+.statistics .compare 
+{
+    width: 100%;
+    padding: 0 3rem;  
+    margin: 3rem 0;  
+   
+}
+
+.statistics .compare .title_content 
+{
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: flex-start;
+}
+
+.statistics .compare .title_content .points
+{
+    color: green;
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+
+/* .statistics .compare .personal
+{
+    background-color: rgb(126,241,78);
+    height: 35px;
+    margin: 1rem 0;
+    display: flex;
+    padding: 0 .5rem;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+}
+
+.statistics .compare .max
+{
+    background-color: rgb(22,170,6);
+    height: 35px;
+    display: flex;
+    padding: 0 .5rem;
+    align-items: center;
+    font-size: 22px;
+    color: #fff; 
+}*/

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Credit</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- <script src="https://cdn.amcharts.com/lib/4/core.js" defer></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js" defer></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js" defer></script> -->
+
+    <script src="./script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">                     
+        <div class="title">Credit Simulator</div>
+
+        <div class="credit-data">
+            <div class="row">
+                <div class="element">
+                    <label for="name">Nume si prenume:</label>
+                    <input type="text" name="name" class="name">
+                </div>
+                <div class="element">
+                    <label for="year">Varsta:</label>
+                    <input type="number" name="year" class="year">
+                </div>
+                <div class="element">
+                    <label for="studies">Studii:</label>
+                    <select name="studies" class="studies">
+                        <option value="">Gimnazial</option>
+                        <option value="">Liceal</option>
+                        <option value="">Licenta</option>
+                        <option value="">Master</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="element">
+                    <label for="salary">Salariu (Lei/Luna):</label>
+                    <input type="number" name="salary" class="salary">
+                </div>
+                <div class="element">
+                    <label for="experience">Vechime (Ani):</label>
+                    <input type="number" name="experience" class="experience">
+                </div>
+                <div class="element">
+                    <label for="studies">Suma (Lei):</label>
+                    <input type="number" name="sum" class="sum">
+             
+                </div>
+            </div>
+            <div class="row">
+                <div class="element">
+                    <label for="locative">Stare locativa: </label>
+                    <select name="locative" class="locative">
+                        <option value="">Locuinta in chirie</option>
+                        <option value="">Locuinta cu parintii</option>
+                        <option value="">Locuinta proprie</option>
+                    </select>
+                </div>
+                <div class="element">
+                    <label for="civile">Stare civila: </label>
+                    <select name="civile" class="civile">
+                        <option value="Necasatorit">Necasatorit</option>
+                        <option value="Casatorit">Casatorit</option>                        
+                    </select> 
+                </div>
+                <div class="element">
+                    <label for="children">Copii:</label>
+                    <input type="number" name="children" class="children">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="element">
+                    <label for="duration">Durata creditului (Luni):</label>
+                    <input type="number" name="duration" class="duration">
+                </div>
+            </div>
+            
+            <div class="check">
+                <button type="button">Verifica-ti scorul</button>
+            </div>
+
+            <div class="fail">
+
+            </div>
+
+        </div>
+
+        <div class="results">
+            <div class="title"></div>
+
+            <div class="content">
+                <div class="score_container">
+                    <div class="score result"></div>
+                    <div class="text">Total Puncte</div>
+                </div>
+                
+                <div class="graphic">
+                    <!-- <div id="chartdiv"></div> -->
+                    <div class="text">Grafic rezultat</div>
+                </div>
+
+                <div class="circle">
+                    <div class="percent result"></div>
+                    <div class="text">Procent reusita</div>
+                </div>
+            </div>
+        
+            <div class="statistics">
+                <div class="title">Statistici Puncte</div>
+                
+                <div class="compare">
+                    <div class="title_content">Varsta</div>
+                    <div class="percent">73%</div>
+                    <div class="bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="points">
+                        <div class="start">0</div>
+                        <div class="end">22</div>
+                    </div>
+                   
+                    
+                </div>
+                <div class="compare">
+                    <div class="title_content">Studii</div>
+                    <div class="percent">%</div>
+                    <div class="bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="points">
+                        <div class="start">0</div>
+                        <div class="end">15</div>
+                    </div>
+                </div>
+                <div class="compare">
+                    <div class="title_content">Salariu</div>
+                    <div class="percent">%</div>
+                    <div class="bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="points">
+                        <div class="start">0</div>
+                        <div class="end">60</div>
+                    </div>
+                </div>
+                <div class="compare">
+                    <div class="title_content">Vechime</div>
+                    <div class="percent">%</div>
+                    <div class="bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="points">
+                        <div class="start">0</div>
+                        <div class="end">10</div>
+                    </div>
+                </div>
+                <div class="compare">
+                    <div class="title_content">Stare locativa</div>
+                    <div class="percent">%</div>
+                    <div class="bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="points">
+                        <div class="start">0</div>
+                        <div class="end">10</div>
+                    </div>
+                </div>
+                <div class="compare">
+                    <div class="title_content">Stare civila</div>
+                    <div class="percent">%</div>
+                    <div class="bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="points">
+                        <div class="start">0</div>
+                        <div class="end">5</div>
+                    </div>
+                </div>
+                <div class="compare">
+                    <div class="title_content">Credit</div>
+                    <div class="percent">%</div>
+                    <div class="bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="points">
+                        <div class="start">0</div>
+                        <div class="end">40</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+</body>
+</html>
